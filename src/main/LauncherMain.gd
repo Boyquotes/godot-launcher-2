@@ -1,7 +1,7 @@
 extends Control
 
 const conf = {
-	"info_url": "https://osakitsukiko.github.io/holy-grail/launcher/info.json",
+	"info_url": "http://osakitsukiko.github.io/holy-grail/launcher/info.json",
 	"platform": "linux" # linux | win | osx
 }
 
@@ -40,9 +40,6 @@ func _ready():
 				break
 		if (s_ok):
 			game_info = s
-	
-	for key in game_info:
-		print(key)
 	
 	if (conf.info_url == ""):
 		show_error("Invalid Config!")
